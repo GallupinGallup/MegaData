@@ -6,10 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5C6EF2761E4904B100A5C3B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C6EF2751E4904B100A5C3B0 /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		5C6EF2701E4904B100A5C3B0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		5C6EF2721E4904B100A5C3B0 /* MegaData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaData; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C6EF2751E4904B100A5C3B0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +52,24 @@
 		5C6EF2741E4904B100A5C3B0 /* MegaData */ = {
 			isa = PBXGroup;
 			children = (
-				5C6EF2751E4904B100A5C3B0 /* main.cpp */,
+				5C6EF27D1E4904FB00A5C3B0 /* Model */,
+				5C6EF27C1E4904F300A5C3B0 /* Controller */,
 			);
 			path = MegaData;
+			sourceTree = "<group>";
+		};
+		5C6EF27C1E4904F300A5C3B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5C6EF27D1E4904FB00A5C3B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +129,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6EF2761E4904B100A5C3B0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +255,7 @@
 				5C6EF27B1E4904B100A5C3B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
