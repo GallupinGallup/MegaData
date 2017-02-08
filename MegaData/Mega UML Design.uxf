@@ -36,4 +36,23 @@ bg=Pink</panel_attributes>
 + IntNode(int value, IntNode * nextNode) : init</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>310</y>
+      <w>370</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>IntNodeArray
+--
+- size : int
+- front : IntNode *
+--
++ IntNodeArray(int size) : constructor
++ setAtIndex(int index, int value) : void
++ getFromIndex(int index) ; int
++ getSize() : int</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>

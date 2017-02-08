@@ -6,27 +6,34 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#ifndef IntNode_hpp
-#define IntNode_hpp
+#include "IntNode.hpp"
 
-class IntNode
-{
-private:
-    int nodeData;
-    IntNode * nodePointer;
-public:
-    //Constructor
-    IntNode();
-    IntNode(int value);
-    /*
-     Creates an IntNode with a specified value and next node pointer
-     */
-    IntNode(int value, IntNode * nextNode);
-    
-    //Methods
-    int getNodeData();
-    IntNode * getNodePointer();
-    
-    void setNodeData(int value);
-    void setNodePointer(IntNode *next);
-};
+IntNode :: IntNode(){
+    this->nodePointer = 0;
+    this->nodeData = -9999;
+}
+
+IntNode :: IntNode(int value){
+    this->nodePointer = 0;
+    this->nodeData = value;
+}
+IntNode :: IntNode(int value, IntNode * nodePointer){
+    this->nodeData = value;
+    this->nodePointer = nodePointer;
+}
+
+void IntNode :: setNodeData(int newValue){
+    nodeData = newValue;
+}
+
+void IntNode :: setNodePointer(IntNode * nodePointer){
+    this->nodePointer = nodePointer;
+}
+
+int IntNode :: getNodeData(){
+    return nodeData;
+}
+
+IntNode * IntNode :: getNodePointer(){
+    return nodePointer;
+}
