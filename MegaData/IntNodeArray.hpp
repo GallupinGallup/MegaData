@@ -7,10 +7,12 @@
 //
 #ifndef IntNodeArray_hpp
 #define IntNodeArray_hpp
+
+#include <stdio.h>
 #include "IntNode.hpp"
 
-class IntNodeArray
-{
+class IntNodeArray{
+    
 private:
     IntNode * front;
     int size;

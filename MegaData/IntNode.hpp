@@ -9,30 +9,30 @@
 #ifndef IntNode_hpp
 #define IntNode_hpp
 
-class IntNode
-{
+#include <stdio.h>
+
+class IntNode {
+    
 private:
     int nodeData;
     IntNode * nodePointer;
-    
 public:
-    //init
     IntNode();
     IntNode(int value);
     /*
-     Creates an IntNode with a specified value and next node pointer
+     * Creates an IntNode with a specified value and nextPointer
+     *
      */
     IntNode(int value, IntNode * nextNode);
     
-    //Methods
+    // Methods
+    
     int getNodeData();
     IntNode * getNodePointer();
     
     void setNodeData(int value);
-    void setNodePointer(IntNode * next);
-    
-    
-    
+    void setNodePointer(IntNode* nextNode);
 };
+
 
 #endif /* IntNode_hpp */

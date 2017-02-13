@@ -6,18 +6,24 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#ifndef ArrayController_hpp
-#define ArrayController_hpp
+#ifndef DataStructureController_hpp
+#define DataStructureController_hpp
 
-class DataStructureController
-{
+#include "Node.h"
+#include <string>
+
+using namespace std;
+
+class DataStructureController {
+    
 private:
     void testIntArray();
-    
+    Node<int> numberNode;
+    Node<string> wordNode;
+    void testNodes();
 public:
     DataStructureController();
     void start();
-    
 };
 
-#endif /* ArrayController_hpp */
+#endif /*DataStructureController*/
