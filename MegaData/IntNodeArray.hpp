@@ -5,15 +5,12 @@
 //  Created by Gallup, Tyler on 2/8/17.
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
-
 #ifndef IntNodeArray_hpp
 #define IntNodeArray_hpp
-
-#include <stdio.h>
 #include "IntNode.hpp"
 
-class IntNodeArray{
-    
+class IntNodeArray
+{
 private:
     IntNode * front;
     int size;

@@ -6,17 +6,18 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#ifndef DataStructureController_hpp
-#define DataStructureController_hpp
+#ifndef ArrayController_hpp
+#define ArrayController_hpp
 
-class DataStructureController {
-    
+class DataStructureController
+{
 private:
     void testIntArray();
     
 public:
     DataStructureController();
     void start();
+    
 };
 
-#endif /*DataStructureController*/
+#endif /* ArrayController_hpp */

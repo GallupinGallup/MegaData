@@ -8,8 +8,10 @@
 
 #include "DataStructureController.hpp"
 
-int main(){
-    DataStructureController * data = new DataStructureController();
-    data->start();
+int main()
+{
+    DataStructureController * myController = new DataStructureController();
+    myController->start();
+    
     return 0;
 }
