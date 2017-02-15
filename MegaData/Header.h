@@ -6,51 +6,74 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#ifndef Header_h
-#define Header_h
+#ifndef Array_h
+#define Array_h
 
-#inclued "Node.h"
+#include "Node.hpp"
 #include <assert.h>
 
-template < class Type>
+template <class Type>
 class Array
 {
 private:
     int size;
-    node<Type> * front;
+    Node<Type> * front;
+    
 public:
-    Array();
-    Array(intSize);
+    array();
+    array(int size);
+    
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
-    int getSize;
+    int getSize();
+    
 };
 
 template <class Type>
 Array<Type> :: Array()
 {
     //Never used
-    //Default constructor only supplied to avoid compication error!
+    //Default constructor only supplied to avoid compelation error.
 }
-templat <class Type>
+template <class Type>
 Array<Type> :: Array(int size)
 {
     assert(size > 0);
     this->size = size;
-    this->front = new Node<Type>();
-    
-    for(int index = 1; index < sixe; index++)
+    this-> = new Node<Type>();
+    for (int index= 1; index < size; index++)
     {
-        Node<Type>() * current = new Node<Type>();
-        current->setNodePointer(front);
+        Node<Type> * current  = new Node<Type>();
+        current -> setNodePointer(front);
         front = current;
     }
 }
 
-tempalt <class Type>
-Type Array<Type> :: getFromIndex(int index)
+template <class Type>
+void Array<Type> :: setAtIndex(int index, Type value)
 {
-    assert
+    assert(index >= 0 && index < size);
+    Node<Type> * current = front;
+    for(int spot = 0; spot < index; spot)
+    {
+        current = current -> getNodePointer();
+    }
+    current-> setNodeData(value)
 }
 
-#endif /* Header_h */
+template <class Type>
+Type Array<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < size);
+    Type value;
+    
+    Node<Type> * current = front;
+    for(int position = 0; position < index; position++)
+    {
+        current = current -> getNodePointer();
+    }
+    value = current->getNodeData();
+    return value;
+}
+
+#endif /* Array_h */
