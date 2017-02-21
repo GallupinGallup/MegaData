@@ -9,8 +9,10 @@
 #ifndef DataStructureController_hpp
 #define DataStructureController_hpp
 
-#include "Node.h"
+#include "Node.hpp"
+#include "Array.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -21,6 +23,7 @@ private:
     Node<int> numberNode;
     Node<string> wordNode;
     void testNodes();
+    void testAdvancedFeatures();
 public:
     DataStructureController();
     void start();

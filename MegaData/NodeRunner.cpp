@@ -9,7 +9,7 @@
 #include "DataStructureController.hpp"
 
 int main(){
-    DataStructureController * data = new DataStructureController();
-    data->start();
+    DataStructureController * app = new DataStructureController();
+    app->start();
     return 0;
 }

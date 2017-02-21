@@ -16,10 +16,10 @@ bg=Pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>160</y>
+      <x>350</x>
+      <y>170</y>
       <w>350</w>
-      <h>240</h>
+      <h>250</h>
     </coordinates>
     <panel_attributes>intNode
 --
@@ -39,9 +39,9 @@ bg=Pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>310</y>
-      <w>370</w>
+      <x>790</x>
+      <y>170</y>
+      <w>500</w>
       <h>250</h>
     </coordinates>
     <panel_attributes>IntNodeArray
@@ -54,5 +54,104 @@ bg=Pink</panel_attributes>
 + getFromIndex(int index) ; int
 + getSize() : int</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>330</x>
+      <y>60</y>
+      <w>950</w>
+      <h>430</h>
+    </coordinates>
+    <panel_attributes>EmptyPackage
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>570</y>
+      <w>490</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+Data Members
+- nodeData : Type
+- nodePointer : Node&lt;Type *
+--
+Constructors
+
++ Node() : constructor
++ Node(Type value) : constructor
+
+Methods
+
++ getNodeData() : Type
++ getNodePointer() : Node&lt;Type&gt; * 
++ setNodeData(Type data) : void
++ setNodePointer(Node&lt;Type&gt; * next) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>550</y>
+      <w>490</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+Data Members
+
+- fronSize : Node&lt;Type&gt; *
+-size : int
+--
+Constructores
++ Array() : constructor
++ Array(intSixe : constructor
+
+Methosd
+
++ geSize() : int
++ setAtIndex(int index, Type value) : void
++ getFromIndex(int index) : Type</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1750</x>
+      <y>100</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>260</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>600</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;30.0</additional_attributes>
   </element>
 </diagram>
