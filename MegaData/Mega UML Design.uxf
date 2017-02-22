@@ -5,7 +5,7 @@
     <id>UMLNote</id>
     <coordinates>
       <x>70</x>
-      <y>30</y>
+      <y>0</y>
       <w>230</w>
       <h>70</h>
     </coordinates>
@@ -17,7 +17,7 @@ bg=Pink</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>350</x>
-      <y>170</y>
+      <y>140</y>
       <w>350</w>
       <h>250</h>
     </coordinates>
@@ -40,7 +40,7 @@ bg=Pink</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>790</x>
-      <y>170</y>
+      <y>140</y>
       <w>500</w>
       <h>250</h>
     </coordinates>
@@ -59,7 +59,7 @@ bg=Pink</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>330</x>
-      <y>60</y>
+      <y>30</y>
       <w>950</w>
       <h>430</h>
     </coordinates>
@@ -72,7 +72,7 @@ bg=orange</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>570</y>
+      <y>540</y>
       <w>490</w>
       <h>300</h>
     </coordinates>
@@ -99,7 +99,7 @@ Methods
     <id>UMLClass</id>
     <coordinates>
       <x>990</x>
-      <y>550</y>
+      <y>520</y>
       <w>490</w>
       <h>250</h>
     </coordinates>
@@ -114,8 +114,11 @@ Constructores
 + Array() : constructor
 + Array(intSixe : constructor
 
-Methosd
+Advanced
++~array&lt;Type&gt;() ; destructor
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied): copy constructor
 
+Methods
 + geSize() : int
 + setAtIndex(int index, Type value) : void
 + getFromIndex(int index) : Type</panel_attributes>
@@ -125,7 +128,7 @@ Methosd
     <id>UMLClass</id>
     <coordinates>
       <x>1750</x>
-      <y>100</y>
+      <y>70</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -136,7 +139,7 @@ Methosd
     <id>Relation</id>
     <coordinates>
       <x>690</x>
-      <y>260</y>
+      <y>230</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -147,11 +150,49 @@ Methosd
     <id>Relation</id>
     <coordinates>
       <x>900</x>
-      <y>600</y>
+      <y>570</y>
       <w>110</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>90.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>770</y>
+      <w>580</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>Model :: List&lt;Type&gt;
+--
+- size : int
+- front : Node&lt;Type&gt; *
+--
++ List&lt;Type&gt;() : constructor
++ List&lt;Type&gt;(const List&lt;Type&gt; &amp; source) : copy constructor
++ ~List&lt;Type&gt;() : deconstructor
+
++ addAtIndex(int index, Type value) : void
++ add(Type value) : void
++ remove(int index) : Type
++ setAtIndex(int index, Type data) : Type
++ getFromIndex(int index) : Type
++ contains(Type data) : bool
++getSize() const : int
++getFront() const : node&lt;Type&gt; *</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>690</y>
+      <w>110</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;310.0;50.0;310.0;50.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

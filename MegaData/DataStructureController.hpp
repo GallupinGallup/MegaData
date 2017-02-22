@@ -5,14 +5,12 @@
 //  Created by Gallup, Tyler on 2/8/17.
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
-
 #ifndef DataStructureController_hpp
 #define DataStructureController_hpp
 
 #include "Node.hpp"
 #include "Array.h"
 #include <string>
-#include <iostream>
 
 using namespace std;
 

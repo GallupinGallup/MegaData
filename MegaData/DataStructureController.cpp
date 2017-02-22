@@ -8,8 +8,6 @@
 
 
 
-
-
 #include "DataStructureController.hpp"
 #include <iostream>
 #include "IntNode.hpp"
@@ -18,7 +16,7 @@
 using namespace std;
 
 DataStructureController :: DataStructureController(){
-    wordNode = Node<string>("Poopy mcpoopface");
+    wordNode = Node<string>();
     numberNode = Node<int>();
 }
 
@@ -26,28 +24,25 @@ void DataStructureController :: start(){
     cout << "Starting the project" << endl;
     cout << "Switching to the array testing" << endl;
     
-    testNodes();
+    testAdvancedFeatures();
     
     cout << "Finished testing" << endl;
 }
 
-void DataStructureController:: testAdvancedFeatures()
-{
+void DataStructureController:: testAdvancedFeatures(){
     int showDestructor = 0;
     
-    if(showDestructor < 1)
-    {
+    if(showDestructor < 1){
         Array<string> words = Array<string>(5);
-        cout << "There should be messages about destructor next" << endl;
+        cout << "There should be message about destructor next" << endl;
     }
     Array<string> words = Array<string>(4);
     words.setAtIndex(0, "at zero");
-    words.setAtIndex(3, "in the last spot");
+    words.setAtIndex(3, "Int the last spot");
     Array<string> copiedWords = Array<string>(words);
     
-    cout << "These should match: "<< endl;
-    cout << words.getFromIndex(0) << " should be the same as "
-    << copiedWords.getFromIndex(0) << endl;
+    cout << "These should match: " << endl;
+    cout << words.getFromIndex(0) << " Should be the same as " << copiedWords.getFromIndex(0) << endl;
 }
 
 void DataStructureController :: testIntArray(){
@@ -66,5 +61,4 @@ void DataStructureController:: testNodes(){
     cout << "Here is the Node<int>" << endl;
     cout << numberNode.getNodeData() << endl;
 }
-
 
