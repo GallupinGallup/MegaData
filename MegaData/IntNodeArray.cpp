@@ -18,7 +18,7 @@ IntNodeArray :: IntNodeArray(int size){
     
     for(int index = 1; index < size; index++){
         IntNode * current = new IntNode();
-        current->setNodePointer(front);
+        current->setNextPointer(front);
         front = current;
     }
 }
@@ -29,7 +29,7 @@ int IntNodeArray :: getFromIndex(int index){
     
     IntNode * current = front;
     for(int posistion = 0; posistion < index; posistion++){
-        current = current->getNodePointer();
+        current = current->getNextPointer();
     }
     
     value = current->getNodeData();

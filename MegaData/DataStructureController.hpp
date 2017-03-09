@@ -11,6 +11,13 @@
 #include "Node.hpp"
 #include "Array.h"
 #include <string>
+#include "Timer.hpp"
+#include "IntNodeArrat.hpp"
+#include "List.hpp"
+#include "DoubleList.hpp"
+#include "Stack.hpp"
+#include "Que.hpp"
+#include <string>
 
 using namespace std;
 
@@ -18,10 +25,13 @@ class DataStructureController {
     
 private:
     void testIntArray();
-    Node<int> numberNode;
-    Node<string> wordNode;
-    void testNodes();
+    void testNodesTypes();
+    void testArratTemplate();
+    void testDestructor();
     void testAdvancedFeatures();
+    void testListIntro();
+    void testDoubleList();
+    void testLisntTiming();
 public:
     DataStructureController();
     void start();

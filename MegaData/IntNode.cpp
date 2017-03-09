@@ -8,32 +8,40 @@
 
 #include "IntNode.hpp"
 
-IntNode :: IntNode(){
-    this->nodePointer = 0;
+IntNode :: IntNode()
+{
+    this->nodePointer = nullptr;
     this->nodeData = -9999;
 }
 
-IntNode :: IntNode(int value){
-    this->nodePointer = 0;
+IntNode :: IntNode(int value)
+{
+    this->nodePointer = nullptr;
     this->nodeData = value;
-}
-IntNode :: IntNode(int value, IntNode * nodePointer){
-    this->nodeData = value;
-    this->nodePointer = nodePointer;
 }
 
-void IntNode :: setNodeData(int newValue){
+IntNode :: IntNode(int value, IntNode * nodePointer)
+{
+    this->nodePointer = nodePointer;
+    this->nodeData = value;
+}
+
+void IntNode :: setNodeData(int newValue)
+{
     nodeData = newValue;
 }
 
-void IntNode :: setNodePointer(IntNode * nodePointer){
+void IntNode :: setNextPointer(IntNode * nodePointer)
+{
     this->nodePointer = nodePointer;
 }
 
-int IntNode :: getNodeData(){
+int IntNode :: getNodeData()
+{
     return nodeData;
 }
 
-IntNode * IntNode :: getNodePointer(){
-    return nodePointer;
+IntNode * IntNode :: getNextPointer()
+{
+    return this->nodePointer;
 }
