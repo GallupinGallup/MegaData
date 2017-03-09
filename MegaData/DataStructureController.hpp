@@ -6,8 +6,8 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#ifndef ArrayController_hpp
-#define ArrayController_hpp
+#ifndef DataStructureController_hpp
+#define DataStructureController_hpp
 
 #include "Node.hpp"
 #include "Array.hpp"
@@ -42,4 +42,4 @@ public:
 
 
 
-#endif /* ArrayController_hpp */
+#endif /* DataStructureController_hpp */

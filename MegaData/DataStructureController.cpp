@@ -55,7 +55,7 @@ DataStructureController :: DataStructureController()
     
 }
 
-//void ArrayController :: testNodes()
+//void DataStructureController :: testNodes()
 //{
 //  cout << "Here is the Node<string>" << endl;
 //  cout << wordNode.getNodeData() << endl;
@@ -63,7 +63,7 @@ DataStructureController :: DataStructureController()
 //  cout << numberNode.getNodeData() << endl;
 //}
 
-//void ArrayController :: testIntArray()
+//void DataStructureController :: testIntArray()
 //{
 //cout << "Testing the array" << endl;
 
