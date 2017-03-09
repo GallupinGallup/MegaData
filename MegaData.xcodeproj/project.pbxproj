@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C0D8A5E1E71E2A100B66EBD /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D8A5C1E71E2A100B66EBD /* Timer.cpp */; };
+		5C0D8A611E71E59700B66EBD /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D8A601E71E59700B66EBD /* Timer.cpp */; };
 		5C644DC41E4BA34D0089FA0C /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C644DC21E4BA34D0089FA0C /* IntNodeArray.cpp */; };
 		5C644DC61E4BA3640089FA0C /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C644DC51E4BA3640089FA0C /* NodeRunner.cpp */; };
 		5C644DC91E4BA3760089FA0C /* DataStructureController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C644DC71E4BA3760089FA0C /* DataStructureController.cpp */; };
@@ -27,8 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5C0D8A5C1E71E2A100B66EBD /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
-		5C0D8A5D1E71E2A100B66EBD /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
+		5C0D8A601E71E59700B66EBD /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = ../../FirstCPlusPlusProject/FirstCPlusPlus/Model/Timer.cpp; sourceTree = "<group>"; };
+		5C0D8A621E71E5B000B66EBD /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = ../../FirstCPlusPlusProject/FirstCPlusPlus/Model/Timer.hpp; sourceTree = "<group>"; };
 		5C59878C1E6F4A7000477180 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		5C59878D1E6F4A7B00477180 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		5C644DC21E4BA34D0089FA0C /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntNodeArray.cpp; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		5C0D8A5F1E71E2B900B66EBD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				5C0D8A5C1E71E2A100B66EBD /* Timer.cpp */,
-				5C0D8A5D1E71E2A100B66EBD /* Timer.hpp */,
+				5C0D8A621E71E5B000B66EBD /* Timer.hpp */,
+				5C0D8A601E71E59700B66EBD /* Timer.cpp */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -213,9 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C0D8A5E1E71E2A100B66EBD /* Timer.cpp in Sources */,
 				5C6EF2801E490F3700A5C3B0 /* IntNode.cpp in Sources */,
 				5C644DC41E4BA34D0089FA0C /* IntNodeArray.cpp in Sources */,
+				5C0D8A611E71E59700B66EBD /* Timer.cpp in Sources */,
 				5C644DC61E4BA3640089FA0C /* NodeRunner.cpp in Sources */,
 				5C644DC91E4BA3760089FA0C /* DataStructureController.cpp in Sources */,
 			);

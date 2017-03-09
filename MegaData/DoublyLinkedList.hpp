@@ -6,6 +6,7 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
+
 #ifndef DoublyLinkedList_h
 #define DoublyLinkedList_h
 
@@ -20,7 +21,7 @@ private:
     
 public:
     DoublyLinkedList();
-    virtual ~DoublyLinkedLIst() = 0;
+    virtual ~DoublyLinkedList() = 0;
     virtual void add(Type data) = 0;
     virtual Type remove(int index) = 0;
     
@@ -49,19 +50,19 @@ DoublyLinkedList<Type> :: ~DoublyLinkedList()
 }
 
 template <class Type>
-int DoublyLinkedList<Type> :: getSize()
+int DoublyLinkedList<Type> :: getSize() const
 {
     return this->size;
 }
 
 template <class Type>
-DoublyLinkedList<Type> * DoublyLinkedList<Type>  :: getFront()
+BiDirectionalNode<Type> * DoublyLinkedList<Type>  :: getFront() const
 {
     return this->front;
 }
 
 template <class Type>
-DoublyLinkedList<Type> * DoublyLinkedList<Type>  :: getEnd()
+BiDirectionalNode<Type> * DoublyLinkedList<Type>  :: getEnd() const
 {
     return this->end;
 }
@@ -79,7 +80,7 @@ void DoublyLinkedList<Type>  :: setFront(DoublyLinkedList<Type>  * front)
 }
 
 template <class Type>
-void DoublyLinkedList<Type>  :: setSize(DoublyLinkedList<Type>  * size)
+void DoublyLinkedList<Type>  :: setSize(int updated)
 {
     this->size = size;
 }

@@ -9,107 +9,139 @@
 
 #include "DataStructureController.hpp"
 #include <iostream>
-#include "IntNode.hpp"
 #include "IntNodeArray.hpp"
-#include "List.hpp"
-
+#include "Queue.hpp"
+#include "Stack.hpp"
+#include "DoubleList.hpp"
 using namespace std;
 
-DataStructureController :: DataStructureController(){
+void DataStructureController :: start()
+{
+    // This is an array
+    /*
+     int intArray[4];
+     intArray[0] = 4;
+     intArray[1] = 6;
+     intArray[2] = 8;
+     intArray[3] = 10;
+     
+     double doubleArray[4] = {23.23, 34.34, 45.45, 56.56};
+     int userChoice;
+     cout << intArray[3] << endl;
+     cout << "Choose a position of doubleArray between 0 and 3" << endl;
+     cin >> userChoice;
+     if(userChoice > 3 || userChoice < 0)
+     {
+     cout << "Sorry but that is out of bounds" << endl;
+     }
+     else
+     {
+     cout << "The value of " << userChoice << " is " << doubleArray[userChoice] << endl;
+     }
+     */
+    
+    cout << "Starting the project" << endl;
+    
+    cout << "Switching to the array testing" << endl;
+    testNodes();
+    cout << "Finished testing" << endl;
+    testAdvancedFeatures();
+    testListIntro();
+    
+    
+}
+
+DataStructureController :: DataStructureController()
+{
     wordNode = Node<string>();
     numberNode = Node<int>();
 }
 
-void DataStructureController :: start(){
-    testList();
-}
-
-void DataStructureController:: testAdvancedFeatures(){
-    int showDestructor = 0;
-    
-    if(showDestructor < 1){
-        Array<string> words = Array<string>(5);
-        cout << "There should be message about destructor next" << endl;
-    }
-    Array<string> words = Array<string>(4);
-    words.setAtIndex(0, "at zero");
-    words.setAtIndex(3, "Int the last spot");
-    Array<string> copiedWords = Array<string>(words);
-    
-    cout << "These should match: " << endl;
-    cout << words.getFromIndex(0) << " Should be the same as " << copiedWords.getFromIndex(0) << endl;
-}
-
-void DataStructureController :: testIntArray(){
-    cout << "Testing the array" << endl;
-    
-    IntNodeArray temp = IntNodeArray(3);
-    
-    for(int index = 0; index < 3; index++){
-        cout << temp.getFromIndex(index) << " is at spot " << index << endl;
-    }
-}
-
-void DataStructureController:: testList(){
-    List<string> taco;
-    taco.addFront("Welcome to disneyland");
-    taco.addEnd("The end is nigh.");
-    taco.addAtIndex(1, "This is the 2nd (3rd) pos");
-    taco.addEnd("Conman");
-    
-    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
-    
-    for(int index = 0; index < taco.getSize(); index++){
-        cout << taco.getFromIndex(index) << " is at index: " << index << endl;
-    }
-    
-    taco.remove(3);
-    
-    cout << "Size: " << taco.getSize() << endl << endl;
-    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
-}
-
-void DataStructureController:: testNodes(){
-    cout << "The contentes of Node<stinrg>" << endl;
+void DataStructureController :: testNodes()
+{
+    cout << "Here is the Node<string>" << endl;
     cout << wordNode.getNodeData() << endl;
     cout << "Here is the Node<int>" << endl;
     cout << numberNode.getNodeData() << endl;
 }
 
-void DataStructureController:: testListTiming()
+void DataStructureController :: testIntArray()
 {
-    DoubleList<int> timingList;
-    Timer totalTimer;
-    totalTimer.startTimer();
-    for(int index = 0; index < 10000; index++)
+    cout << "Testing the array" << endl;
+    
+    IntNodeArray temp = IntNodeArray(3);
+    for(int cute = 0; cute < 3; cute++)
     {
-        timingList.add(rand());
+        cout << temp.getFromIndex(cute) << " Is at spot  " << cute << endl;
     }
     
-    long slowTime [1000];
-    long fastTime[1000];
-    double averageSlow = 0.00, averageFast = 0.00;
-    Timer doubleTimer;
+    cout << "Testing input" << endl;
     
-    for(int index = 0; index<1000; index++)
+    for(int index = 0; index < 3; index++)
     {
-        int randomIndex = rand() % 10000;
-        doubleTimer.startTimer();
-        timingList.getFromIndex(randomIndex);
-        doubleTimer.stopTimer();
-        slowTime[index] = doubleTimer.getExecutionTimeInMicroseconds();
-        doubleTimer.resetTimer();
+        temp.setAtIndex(index, index);
         
-        doubleTimer.startTimer();
-        timingList.getFromIndexFast(randomIndex);
-        doubleTimer.stopTimer();
-        fastTimer[index] = doubleTimer.getExecutionTimeInMicroseconds();
-        doubleTimer.resetTimer();
-        
-        averageSlow += slowTimer[index];
-        averageFast += fastTimer[index];
+    }
+    for(int index = 0; index< 3; index++)
+    {
+        cout << temp.getFromIndex(index) << " is at spot " << index << endl;
+    }
+}
+
+void DataStructureController :: testAdvancedFeatures()
+{
+    int showDeconstructor = 0;
+    if(showDeconstructor < 1)
+    {
+        Array<string> words = Array<string>(5);
+        cout << "There should be messages about the deconstructor next." << endl;
+    }
+    Array<string> words = Array<string>(4);
+    words.setAtIndex(0, "at 0");
+    words.setAtIndex(3, "in the last spot.");
+    Array<string> copiedWords = Array<string>(words);
+    
+    cout<< "These should match: " << endl;
+    cout<< words.getFromIndex(0) << "Should be the same as " << copiedWords.getFromIndex(0) << endl;
+    
+    copiedWords.setAtIndex(3, "Changed the contents of the copied Array");
+    
+}
+
+void DataStructure∫Controller :: testListIntro()
+{
+    string removed;
+    List<string> sample;
+    sample.addFront("\"My name is larry! FEAR ME!!!!!!\"");
+    sample.addEnd("(somewhere distant) I will never fear larry!!!!");
+    sample.addAtIndex(0, "As Larry mounted the small hill a new determination filled him.");
+    
+    for(int index = 0; index < sample.getSize(); index++)
+    {
+        cout << sample.getFromIndex(index) << endl;
     }
     
-    averageSlow = averageSlow/100;
-    averageFast = averageFase/100;
+    removed = sample.remove(1);
+    
+    cout << "You just removed" << removed << endl;
+    sample.setAtIndex(1,"However he no longer felt courageous enough to share his message with the world");
+    
+    cout << sample.getFromIndex(1) << endl;;
+    
+    if (sample.contains("However he no longer felt courageous enough to share his message with the world") == 0)
+    {
+        cout << "it contains this yay" << endl;
+    }
+    else
+    {
+        cout <<  "no good" << endl;
+    }
+    
+    cout << sample.getEnd() << endl;
+    cout << sample.getFront() << endl;
+    
+    
+    
+    
+    
 }

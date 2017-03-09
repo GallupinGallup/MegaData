@@ -9,6 +9,8 @@
 #ifndef DoubleList_h
 #define DoubleList_h
 
+#include "DoublyLinkedList.hpp"
+
 template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
@@ -89,7 +91,7 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     assert(index < this->getSize());
     Type valueAtIndex;
     BiDirectionalNode<Type> * reference;
-    if(index < this->getSize() /2
+    if(index < this->getSize() /2)
        {
            reference = this->fetFront();
            for(int position = 0; position < index; position++)
@@ -100,7 +102,7 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
            reference = this->getEnd();
            for(int position = this->getSize() - 1; position > index; position--)
            {
-               reference = reerence->getPreviousPointer();
+               reference = reference->getPreviousPointer();
            }
            
            valueAtIndex = reference->getNodeData();

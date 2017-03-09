@@ -6,10 +6,11 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
+
 #ifndef BiDirectionalNode_h
 #define BiDirectionalNode_h
 
-template class <Type>
+template <class Type>
 class BiDirectionalNode : public Node<Type>
 {
 private:
@@ -22,10 +23,10 @@ public:
     BiDirectionalNode();
     BiDirectionalNode(Type data);
     BiDirectionalNode(Type data,  BiDirectionalNode<Type> * previous, BiDirectionalNode<Type> * next);
-}
+};
 
 template <class Type>
-BiDirectionalNode<Type> :: BidirectionalNode() : Node()
+BiDirectionalNode<Type> :: BiDirectionalNode() : Node<Type>()
 {
     
 }
@@ -35,7 +36,5 @@ BiDirectionalNode<Type> :: BiDirectionalNode(Type data) : Node<Type>(data)
 {
     
 }
-
-
 
 #endif /* BiDirectionalNode_h */

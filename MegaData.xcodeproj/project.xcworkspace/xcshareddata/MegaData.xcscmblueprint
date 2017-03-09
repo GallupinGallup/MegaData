@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "79F06233B8F1DB6D5D4D13D02C16A5D08B3B8BD8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3B78DFA50E98A9210B5BBEBB7BA69807546DE7D8" : 9223372036854775807,
+    "79F06233B8F1DB6D5D4D13D02C16A5D08B3B8BD8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1198E840-DCA9-4FE5-8424-573478D5ADD5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3B78DFA50E98A9210B5BBEBB7BA69807546DE7D8" : "FirstCPlusPlusProject\/",
+    "79F06233B8F1DB6D5D4D13D02C16A5D08B3B8BD8" : "MegaData\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MegaData",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MegaData.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GallupinGallup\/FirstCPlusPlusProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B78DFA50E98A9210B5BBEBB7BA69807546DE7D8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GallupinGallup\/MegaData.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79F06233B8F1DB6D5D4D13D02C16A5D08B3B8BD8"
+    }
+  ]
+}

@@ -12,11 +12,11 @@
 #include "Array.h"
 #include <string>
 #include "Timer.hpp"
-#include "IntNodeArrat.hpp"
+#include "IntNodeArray.hpp"
 #include "List.hpp"
 #include "DoubleList.hpp"
 #include "Stack.hpp"
-#include "Que.hpp"
+#include "Queue.hpp"
 #include <string>
 
 using namespace std;
