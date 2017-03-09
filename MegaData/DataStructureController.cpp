@@ -108,7 +108,7 @@ void DataStructureController :: testAdvancedFeatures()
     
 }
 
-void DataStructure∫Controller :: testListIntro()
+void DataStructureController :: testListIntro()
 {
     string removed;
     List<string> sample;

@@ -5,36 +5,41 @@
 //  Created by Gallup, Tyler on 2/8/17.
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
-#ifndef DataStructureController_hpp
-#define DataStructureController_hpp
+
+#ifndef ArrayController_hpp
+#define ArrayController_hpp
 
 #include "Node.hpp"
-#include "Array.h"
-#include <string>
-#include "Timer.hpp"
-#include "IntNodeArray.hpp"
-#include "List.hpp"
-#include "DoubleList.hpp"
-#include "Stack.hpp"
+#include "Array.hpp"
+#include "CircularList.hpp"
 #include "Queue.hpp"
+#include "Stack.hpp"
+#include "DoubleList.hpp"
+#include "DoublyLinkedList.hpp"
+#include "BiDirectionalNode.hpp"
+#include "Timer.hpp"
+
 #include <string>
 
 using namespace std;
 
-class DataStructureController {
-    
+class DataStructureController
+{
 private:
     void testIntArray();
-    void testNodesTypes();
-    void testArratTemplate();
-    void testDestructor();
+    Node<int> numberNode;
+    Node<string> wordNode;
+    void testNodes();
     void testAdvancedFeatures();
     void testListIntro();
-    void testDoubleList();
-    void testLisntTiming();
+    void testListTiming();
+    
 public:
     DataStructureController();
     void start();
+    
 };
 
-#endif /*DataStructureController*/
+
+
+#endif /* ArrayController_hpp */

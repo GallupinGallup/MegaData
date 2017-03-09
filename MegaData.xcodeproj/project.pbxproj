@@ -40,7 +40,7 @@
 		5C6EF2721E4904B100A5C3B0 /* MegaData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaData; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6EF27E1E490F3700A5C3B0 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntNode.cpp; sourceTree = "<group>"; };
 		5C6EF27F1E490F3700A5C3B0 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntNode.hpp; sourceTree = "<group>"; };
-		5CA7513D1E54E60900CFB271 /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		5CA7513D1E54E60900CFB271 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		5CD3988C1E523F4A000F9356 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		5CDCA2DE1E6A0FAC00C8CFC3 /* DoubleList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleList.hpp; sourceTree = "<group>"; };
 		5CE57D741E64C7BC00C3C8EE /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiDirectionalNode.hpp; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		5C59878A1E6F471600477180 /* TypedDataSample */ = {
 			isa = PBXGroup;
 			children = (
-				5CA7513D1E54E60900CFB271 /* Array.h */,
+				5CA7513D1E54E60900CFB271 /* Array.hpp */,
 				5C696D7B1E5CDBB90024AF2D /* List.hpp */,
 				5CF1441A1E6763320007CEAA /* DoublyLinkedList.hpp */,
 			);

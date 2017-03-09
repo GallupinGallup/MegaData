@@ -9,7 +9,7 @@
 #ifndef CircularList_h
 #define CircularList_h
 
-#include "DoublyLinckedList.hpp"
+#include "DoublyLinkedList.hpp"
 
 template <class Type>
 class CircularList : public DoublyLinkedList<Type>
