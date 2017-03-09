@@ -9,10 +9,8 @@
 
 #include "DataStructureController.hpp"
 #include <iostream>
-#include "IntNodeArray.hpp"
-#include "Queue.hpp"
-#include "Stack.hpp"
-#include "DoubleList.hpp"
+
+
 using namespace std;
 
 void DataStructureController :: start()
@@ -40,53 +38,53 @@ void DataStructureController :: start()
      }
      */
     
-    cout << "Starting the project" << endl;
+    //cout << "Starting the project" << endl;
     
-    cout << "Switching to the array testing" << endl;
-    testNodes();
-    cout << "Finished testing" << endl;
-    testAdvancedFeatures();
-    testListIntro();
+    // cout << "Switching to the array testing" << endl;
+    // testNodes();
+    // cout << "Finished testing" << endl;
+    // testAdvancedFeatures();
+    // testListIntro();
+    testListTiming();
     
     
 }
 
 DataStructureController :: DataStructureController()
 {
-    wordNode = Node<string>();
-    numberNode = Node<int>();
+    
 }
 
-void DataStructureController :: testNodes()
-{
-    cout << "Here is the Node<string>" << endl;
-    cout << wordNode.getNodeData() << endl;
-    cout << "Here is the Node<int>" << endl;
-    cout << numberNode.getNodeData() << endl;
-}
+//void ArrayController :: testNodes()
+//{
+//  cout << "Here is the Node<string>" << endl;
+//  cout << wordNode.getNodeData() << endl;
+// cout << "Here is the Node<int>" << endl;
+//  cout << numberNode.getNodeData() << endl;
+//}
 
-void DataStructureController :: testIntArray()
-{
-    cout << "Testing the array" << endl;
-    
-    IntNodeArray temp = IntNodeArray(3);
-    for(int cute = 0; cute < 3; cute++)
-    {
-        cout << temp.getFromIndex(cute) << " Is at spot  " << cute << endl;
-    }
-    
-    cout << "Testing input" << endl;
-    
-    for(int index = 0; index < 3; index++)
-    {
-        temp.setAtIndex(index, index);
-        
-    }
-    for(int index = 0; index< 3; index++)
-    {
-        cout << temp.getFromIndex(index) << " is at spot " << index << endl;
-    }
-}
+//void ArrayController :: testIntArray()
+//{
+//cout << "Testing the array" << endl;
+
+//IntNodeArray temp = IntNodeArray(3);
+// for(int cute = 0; cute < 3; cute++)
+// {
+//     cout << temp.getFromIndex(cute) << " Is at spot  " << cute << endl;
+// }
+
+// cout << "Testing input" << endl;
+
+// for(int index = 0; index < 3; index++)
+//{
+//    temp.setAtIndex(index, index);
+//
+// }
+// for(int index = 0; index< 3; index++)
+//  {
+//      cout << temp.getFromIndex(index) << " is at spot " << index << endl;
+//  }
+//}
 
 void DataStructureController :: testAdvancedFeatures()
 {
@@ -140,8 +138,50 @@ void DataStructureController :: testListIntro()
     cout << sample.getEnd() << endl;
     cout << sample.getFront() << endl;
     
+}
+
+void DataStructureController :: testListTiming()
+{
+    DoubleList<int> timingList;
+    Timer totalTimer;
+    totalTimer.startTimer();
+    for(int index = 0; index < 10000; index++)
+    {
+        
+        timingList.add(rand());
+        
+    }
+    long slowTime [1000];
+    long fastTime [1000];
+    double averageSlow = 0.00, averageFast = 0.00;
+    Timer doubleTimer;
     
+    for(int index = 0; index < 1000; index++)
+    {
+        
+        int randomIndex = rand() % 10000;
+        doubleTimer.startTimer();
+        timingList.getFromIndex(randomIndex);
+        doubleTimer.stopTimer();
+        slowTime[index] = doubleTimer.getExecutionTimeInMicroseconds();
+        doubleTimer.resetTimer();
+        
+        
+        doubleTimer.startTimer();
+        timingList.getFromIndexFast(randomIndex);
+        doubleTimer.stopTimer();
+        fastTime[index] = doubleTimer.getExecutionTimeInMicroseconds();
+        doubleTimer.resetTimer();
+        
+        averageSlow += slowTime[index];
+        averageFast += fastTime[index];
+        
+        
+    }
     
+    averageSlow += averageSlow/1000.00;
+    averageFast += averageFast/1000.00;
     
-    
+    cout << "When you do it in one diretion searching you get an average of: "  << averageSlow<< endl;
+    cout << "When you do the BiDirectional way you get: " << averageFast << endl;
 }
