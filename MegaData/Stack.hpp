@@ -91,6 +91,16 @@ Type Stack<Type> ::peek()
     assert(this->getSize() > 0);
     return this->getEnd()->getNodeData();
 }
+template <class Type>
+void Stack<Type> :: add(Type add){
+    push(add);
+}
+
+template <class Type>
+Type Stack<Type> :: remove(int index){
+    assert(index == this->getSize() - 1);
+    return pop();
+}
 
 
 #endif /* Stack_h */

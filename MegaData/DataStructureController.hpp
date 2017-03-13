@@ -18,6 +18,7 @@
 #include "DoublyLinkedList.hpp"
 #include "BiDirectionalNode.hpp"
 #include "Timer.hpp"
+#include "FoodItem.hpp"
 
 #include <string>
 
@@ -33,6 +34,7 @@ private:
     void testAdvancedFeatures();
     void testListIntro();
     void testListTiming();
+    void testFoodQueue();
     
 public:
     DataStructureController();
