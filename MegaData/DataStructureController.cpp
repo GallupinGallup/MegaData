@@ -6,138 +6,78 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-
 #include "DataStructureController.hpp"
 #include <iostream>
-
+#include "IntNode.hpp"
+#include "IntNodeArray.hpp"
+#include "List.hpp"
+#include "Queue.hpp"
+#include "FoodItem.hpp"
+#include "Stack.hpp"
+#include "CircularList.hpp"
+#include "DoubleList.hpp"
 
 using namespace std;
 
-void DataStructureController :: start()
-{
-    // This is an array
-    /*
-     int intArray[4];
-     intArray[0] = 4;
-     intArray[1] = 6;
-     intArray[2] = 8;
-     intArray[3] = 10;
-     
-     double doubleArray[4] = {23.23, 34.34, 45.45, 56.56};
-     int userChoice;
-     cout << intArray[3] << endl;
-     cout << "Choose a position of doubleArray between 0 and 3" << endl;
-     cin >> userChoice;
-     if(userChoice > 3 || userChoice < 0)
-     {
-     cout << "Sorry but that is out of bounds" << endl;
-     }
-     else
-     {
-     cout << "The value of " << userChoice << " is " << doubleArray[userChoice] << endl;
-     }
-     */
-    
-    //cout << "Starting the project" << endl;
-    
-    // cout << "Switching to the array testing" << endl;
-    // testNodes();
-    // cout << "Finished testing" << endl;
-    // testAdvancedFeatures();
-    // testListIntro();
-    testListTiming();
-    
-    
+DataStructureController :: DataStructureController(){
+    wordNode = Node<string>();
+    numberNode = Node<int>();
 }
 
-DataStructureController :: DataStructureController()
-{
-    
+void DataStructureController :: start(){
+    testFoodQueue();
 }
 
-//void DataStructureController :: testNodes()
-//{
-//  cout << "Here is the Node<string>" << endl;
-//  cout << wordNode.getNodeData() << endl;
-// cout << "Here is the Node<int>" << endl;
-//  cout << numberNode.getNodeData() << endl;
-//}
-
-//void DataStructureController :: testIntArray()
-//{
-//cout << "Testing the array" << endl;
-
-//IntNodeArray temp = IntNodeArray(3);
-// for(int cute = 0; cute < 3; cute++)
-// {
-//     cout << temp.getFromIndex(cute) << " Is at spot  " << cute << endl;
-// }
-
-// cout << "Testing input" << endl;
-
-// for(int index = 0; index < 3; index++)
-//{
-//    temp.setAtIndex(index, index);
-//
-// }
-// for(int index = 0; index< 3; index++)
-//  {
-//      cout << temp.getFromIndex(index) << " is at spot " << index << endl;
-//  }
-//}
-
-void DataStructureController :: testAdvancedFeatures()
-{
-    int showDeconstructor = 0;
-    if(showDeconstructor < 1)
-    {
+void DataStructureController:: testAdvancedFeatures(){
+    int showDestructor = 0;
+    
+    if(showDestructor < 1){
         Array<string> words = Array<string>(5);
-        cout << "There should be messages about the deconstructor next." << endl;
+        cout << "There should be message about destructor next" << endl;
     }
     Array<string> words = Array<string>(4);
-    words.setAtIndex(0, "at 0");
-    words.setAtIndex(3, "in the last spot.");
+    words.setAtIndex(0, "at zero");
+    words.setAtIndex(3, "Int the last spot");
     Array<string> copiedWords = Array<string>(words);
     
-    cout<< "These should match: " << endl;
-    cout<< words.getFromIndex(0) << "Should be the same as " << copiedWords.getFromIndex(0) << endl;
-    
-    copiedWords.setAtIndex(3, "Changed the contents of the copied Array");
-    
+    cout << "These should match: " << endl;
+    cout << words.getFromIndex(0) << " Should be the same as " << copiedWords.getFromIndex(0) << endl;
 }
 
-void DataStructureController :: testListIntro()
-{
-    string removed;
-    List<string> sample;
-    sample.addFront("\"My name is larry! FEAR ME!!!!!!\"");
-    sample.addEnd("(somewhere distant) I will never fear larry!!!!");
-    sample.addAtIndex(0, "As Larry mounted the small hill a new determination filled him.");
+void DataStructureController :: testIntArray(){
+    cout << "Testing the array" << endl;
     
-    for(int index = 0; index < sample.getSize(); index++)
-    {
-        cout << sample.getFromIndex(index) << endl;
+    IntNodeArray temp = IntNodeArray(3);
+    
+    for(int index = 0; index < 3; index++){
+        cout << temp.getFromIndex(index) << " is at spot " << index << endl;
+    }
+}
+
+void DataStructureController:: testList(){
+    List<string> taco;
+    taco.addFront("Welcome to disneyland");
+    taco.addEnd("The end is nigh.");
+    taco.addAtIndex(1, "This is the 2nd (3rd) pos");
+    taco.addEnd("Conman");
+    
+    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
+    
+    for(int index = 0; index < taco.getSize(); index++){
+        cout << taco.getFromIndex(index) << " is at index: " << index << endl;
     }
     
-    removed = sample.remove(1);
+    taco.remove(3);
     
-    cout << "You just removed" << removed << endl;
-    sample.setAtIndex(1,"However he no longer felt courageous enough to share his message with the world");
-    
-    cout << sample.getFromIndex(1) << endl;;
-    
-    if (sample.contains("However he no longer felt courageous enough to share his message with the world") == 0)
-    {
-        cout << "it contains this yay" << endl;
-    }
-    else
-    {
-        cout <<  "no good" << endl;
-    }
-    
-    cout << sample.getEnd() << endl;
-    cout << sample.getFront() << endl;
-    
+    cout << "Size: " << taco.getSize() << endl << endl;
+    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
+}
+
+void DataStructureController:: testNodes(){
+    cout << "The contentes of Node<stinrg>" << endl;
+    cout << wordNode.getNodeData() << endl;
+    cout << "Here is the Node<int>" << endl;
+    cout << numberNode.getNodeData() << endl;
 }
 
 void DataStructureController :: testListTiming()
@@ -184,4 +124,67 @@ void DataStructureController :: testListTiming()
     
     cout << "When you do it in one diretion searching you get an average of: "  << averageSlow<< endl;
     cout << "When you do the BiDirectional way you get: " << averageFast << endl;
+}
+
+void DataStructureController:: testIntStack(){
+    Stack<int> numberStack;
+    
+    numberStack.push(811);
+    numberStack.add(2315);
+    
+    cout << "Size of Stack: " << numberStack.getSize() << endl;
+    
+    numberStack.push(00);
+    numberStack.push(5555);
+    numberStack.push(9898);
+    
+    cout << "Size of Stack: " << numberStack.getSize() << endl;
+    
+    int testValue = numberStack.pop();
+    cout << "Test value is " << testValue << " and should be 9898 " << endl;
+    
+    int otherTest = numberStack.remove(3);
+    cout << "Other test value is " << otherTest << " and should be 5555 " << endl;
+    
+    cout << "Size of Stack: " << numberStack.getSize() << endl;
+    
+    cout << endl;
+    
+}
+
+void DataStructureController:: testFoodQueue(){
+    Queue<FoodItem> foods;
+    
+    FoodItem FrijolesConQueso("Frijoles con queso");
+    FrijolesConQueso.setCost(200);
+    FrijolesConQueso.setCalories(2500);
+    FrijolesConQueso.isDelicious(true);
+    
+    FoodItem Pollo("Pollo");
+    Pollo.setCost(200);
+    Pollo.setCalories(1000);
+    Pollo.isDelicious(true);
+    
+    FoodItem Brócoli("brócoli");
+    Brócoli.setCost(1);
+    Brócoli.setCalories(60);
+    Brócoli.isDelicious(false);
+    
+    cout << "Size: " << foods.getSize() << endl;
+    
+    foods.enqueue(FrijolesConQueso);
+    foods.add(Pollo);
+    
+    cout << "Size: " << foods.getSize() << endl;
+    
+    FoodItem firstItem = foods.peek();
+    cout << "Item in queue: " << firstItem.getFoodName() << endl;
+    
+    foods.enqueue(Brócoli);
+    
+    FoodItem dequeued = foods.dequeue();
+    cout << "The Item dequeued from the queue was: " << dequeued.getFoodName() << endl;
+    
+    FoodItem removed = foods.dequeue();
+    cout << "The Item removed from the queue was: " << removed.getFoodName() << endl << endl;
 }

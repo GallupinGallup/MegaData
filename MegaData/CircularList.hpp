@@ -114,6 +114,6 @@ Type CircularList<Type> :: remove(int index)
 template <class Type>
 Type CircularList<Type> :: setAtIndex(int index, Type data)
 {
-    assert(index)
+    assert(index);
 }
 #endif /* CircularList_h */

@@ -38,27 +38,34 @@ Stack<Type>:: ~Stack()
     BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront() != nullptr)
     {
-        
         this->setFront(this->getFront()->getNextPointer());
         delete remove;
         remove= this->getFront();
-        
-        
-        
     }
+}
+
+template <class Type>
+void Stack<Type> :: add(Type add){
+    push(add);
+}
+
+template <class Type>
+Type Stack<Type> :: remove(int index){
+    assert(index == this->getSize() - 1);
+    return pop();
 }
 
 template <class Type>
 void Stack<Type> :: push(Type addedThing)
 {
     BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(addedThing);
-    if(this->setSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
+    if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {
         this->setFront(addToStack);
     }
     else
     {
-        this->setEnd()->setNextPointer(addToStack);
+        this->getEnd()->setNextPointer(addToStack);
         addToStack -> setPreviousPointer(this->getEnd());
     }
     this->setEnd(addToStack);
@@ -81,7 +88,7 @@ Type Stack<Type> :: pop()
     
     delete this->getEnd();
     this->setEnd(update);
-    this->setSize(this->getSize - 1);
+    this->setSize(this->getSize() - 1);
     return removed;
 }
 
@@ -90,16 +97,6 @@ Type Stack<Type> ::peek()
 {
     assert(this->getSize() > 0);
     return this->getEnd()->getNodeData();
-}
-template <class Type>
-void Stack<Type> :: add(Type add){
-    push(add);
-}
-
-template <class Type>
-Type Stack<Type> :: remove(int index){
-    assert(index == this->getSize() - 1);
-    return pop();
 }
 
 

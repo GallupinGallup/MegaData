@@ -5,7 +5,6 @@
 //  Created by Gallup, Tyler on 2/8/17.
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
-
 #ifndef DataStructureController_hpp
 #define DataStructureController_hpp
 
@@ -18,7 +17,6 @@
 #include "DoublyLinkedList.hpp"
 #include "BiDirectionalNode.hpp"
 #include "Timer.hpp"
-#include "FoodItem.hpp"
 
 #include <string>
 
@@ -30,10 +28,11 @@ private:
     void testIntArray();
     Node<int> numberNode;
     Node<string> wordNode;
-    void testNodes();
     void testAdvancedFeatures();
-    void testListIntro();
+    void testList();
     void testListTiming();
+    void testNodes();
+    void testIntStack();
     void testFoodQueue();
     
 public:
@@ -42,6 +41,4 @@ public:
     
 };
 
-
-
-#endif /* DataStructureController_hpp */
+#endif /*DataStructureController*/
