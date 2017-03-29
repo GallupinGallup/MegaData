@@ -33,15 +33,14 @@ void DataStructureController:: testAdvancedFeatures(){
     
     if(showDestructor < 1){
         Array<string> words = Array<string>(5);
-        cout << "There should be message about destructor next" << endl;
+        cout << "Destructor stuff" << endl;
     }
     Array<string> words = Array<string>(4);
-    words.setAtIndex(0, "at zero");
-    words.setAtIndex(3, "Int the last spot");
+    words.setAtIndex(0, "first");
+    words.setAtIndex(3, "last");
     Array<string> copiedWords = Array<string>(words);
     
-    cout << "These should match: " << endl;
-    cout << words.getFromIndex(0) << " Should be the same as " << copiedWords.getFromIndex(0) << endl;
+    cout << words.getFromIndex(0) << " should = " << copiedWords.getFromIndex(0) << endl;
 }
 
 void DataStructureController :: testIntArray(){
@@ -55,22 +54,22 @@ void DataStructureController :: testIntArray(){
 }
 
 void DataStructureController:: testList(){
-    List<string> taco;
-    taco.addFront("Welcome to disneyland");
-    taco.addEnd("The end is nigh.");
-    taco.addAtIndex(1, "This is the 2nd (3rd) pos");
-    taco.addEnd("Conman");
+    List<string> food;
+    food.addFront("Taco");
+    food.addEnd("Steak");
+    food.addAtIndex(1, "Jacob is a poop");
+    food.addEnd("no");
     
-    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
+    cout << "Contains \"no\"? " << food.contains("no") << endl << endl;
     
-    for(int index = 0; index < taco.getSize(); index++){
-        cout << taco.getFromIndex(index) << " is at index: " << index << endl;
+    for(int index = 0; index < food.getSize(); index++){
+        cout << food.getFromIndex(index) << " is at index: " << index << endl;
     }
     
-    taco.remove(3);
+    food.remove(3);
     
-    cout << "Size: " << taco.getSize() << endl << endl;
-    cout << "Contains \"Conman\"? " << taco.contains("Conman") << endl << endl;
+    cout << "Size: " << food.getSize() << endl << endl;
+    cout << "Contains \"no\"? " << food.contains("no") << endl << endl;
 }
 
 void DataStructureController:: testNodes(){
@@ -135,16 +134,16 @@ void DataStructureController:: testIntStack(){
     cout << "Size of Stack: " << numberStack.getSize() << endl;
     
     numberStack.push(00);
-    numberStack.push(5555);
-    numberStack.push(9898);
+    numberStack.push(666);
+    numberStack.push(789);
     
     cout << "Size of Stack: " << numberStack.getSize() << endl;
     
     int testValue = numberStack.pop();
-    cout << "Test value is " << testValue << " and should be 9898 " << endl;
+    cout << "Test value is " << testValue << " and should be 789 " << endl;
     
     int otherTest = numberStack.remove(3);
-    cout << "Other test value is " << otherTest << " and should be 5555 " << endl;
+    cout << "Other test value is " << otherTest << " and should be 666 " << endl;
     
     cout << "Size of Stack: " << numberStack.getSize() << endl;
     

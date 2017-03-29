@@ -13,6 +13,7 @@
 		5C644DC61E4BA3640089FA0C /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C644DC51E4BA3640089FA0C /* NodeRunner.cpp */; };
 		5C644DC91E4BA3760089FA0C /* DataStructureController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C644DC71E4BA3760089FA0C /* DataStructureController.cpp */; };
 		5C6EF2801E490F3700A5C3B0 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C6EF27E1E490F3700A5C3B0 /* IntNode.cpp */; };
+		5CDAA63D1E8C2AD400362623 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CDAA63B1E8C2AD400362623 /* CrimeData.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,9 @@
 		5C6EF27F1E490F3700A5C3B0 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntNode.hpp; sourceTree = "<group>"; };
 		5CA7513D1E54E60900CFB271 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		5CD3988C1E523F4A000F9356 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		5CDAA63A1E8C29BD00362623 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
+		5CDAA63B1E8C2AD400362623 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = ../../../../Downloads/CrimeData.cpp; sourceTree = "<group>"; };
+		5CDAA63C1E8C2AD400362623 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = ../../../../Downloads/CrimeData.hpp; sourceTree = "<group>"; };
 		5CDCA2DE1E6A0FAC00C8CFC3 /* DoubleList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleList.hpp; sourceTree = "<group>"; };
 		5CE57D741E64C7BC00C3C8EE /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiDirectionalNode.hpp; sourceTree = "<group>"; };
 		5CF1441A1E6763320007CEAA /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoublyLinkedList.hpp; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				5C6EF27E1E490F3700A5C3B0 /* IntNode.cpp */,
+				5CDAA63B1E8C2AD400362623 /* CrimeData.cpp */,
+				5CDAA63C1E8C2AD400362623 /* CrimeData.hpp */,
 				5C6EF27F1E490F3700A5C3B0 /* IntNode.hpp */,
 				5C644DC21E4BA34D0089FA0C /* IntNodeArray.cpp */,
 				5C644DC31E4BA34D0089FA0C /* IntNodeArray.hpp */,
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5C644DC51E4BA3640089FA0C /* NodeRunner.cpp */,
+				5CDAA63A1E8C29BD00362623 /* FileController.hpp */,
 				5C644DC71E4BA3760089FA0C /* DataStructureController.cpp */,
 				5C644DC81E4BA3760089FA0C /* DataStructureController.hpp */,
 			);
@@ -220,6 +227,7 @@
 			files = (
 				5C6EF2801E490F3700A5C3B0 /* IntNode.cpp in Sources */,
 				5C644DC41E4BA34D0089FA0C /* IntNodeArray.cpp in Sources */,
+				5CDAA63D1E8C2AD400362623 /* CrimeData.cpp in Sources */,
 				5C0D8A611E71E59700B66EBD /* Timer.cpp in Sources */,
 				5C644DC61E4BA3640089FA0C /* NodeRunner.cpp in Sources */,
 				5C28F3881E7712E500D30DAC /* FoodItem.cpp in Sources */,
