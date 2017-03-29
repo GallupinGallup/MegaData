@@ -6,28 +6,25 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#ifndef FileController_h
-#define FileController_h
+#ifndef FileController_hpp
+#define FileController_hpp
 
 #include "DoubleList.hpp"
 #include "FoodItem.hpp"
-#include "CrimeData.hpp"
 #include <string>
-#include <fstream>
 #include <iostream>
 #include <sstream>
+#include <fstream>
 
 using namespace std;
 
-class FileController
-{
+class FileController{
 private:
-    doubleList<foodItem> foodItemList;
+    DoubleList<FoodItem> foodItemList;
     
 public:
-    DoubleList<FoodItem> readDataFromFiel(string filename);
-    void writeFoodDataStisics(DoubleList<FoodItem> source, string fileName);
-    
+    DoubleList<FoodItem> readDataFromFile(string filename);
+    void writeFoodItemDataStatistis(DoubleList<FoodItem> sourc, string filename);
 };
 
-#endif /* FileController_h */
+#endif /* FileController_hpp */
