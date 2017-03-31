@@ -6,7 +6,6 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-
 #ifndef foodItem_hpp
 #define foodItem_hpp
 
@@ -35,6 +34,11 @@ public:
     void setFoodName(string name);
     void setCost(double cost);
     void isDelicious(bool delicious);
+    
+    
+    bool operator < (FoodItem & otherFood);
+    bool operator > (FoodItem & otherFood);
+    bool operator == (FoodItem & otherFood);
     
 };
 

@@ -9,6 +9,7 @@
 #ifndef DoubleList_h
 #define DoubleList_h
 
+#include "DoublyLinkedList.hpp"
 template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
@@ -19,6 +20,8 @@ public:
     DoubleList();
     ~DoubleList();
     void add(Type data);
+    int indexOf(Type findMe);
+    int otherIndexOf(Type findMe, int position);
     Type remove(int index);
     void addAtIndexFast(int index, Type value);
     void addAtIndex(int index, Type value);
@@ -76,12 +79,36 @@ Type DoubleList<Type> :: remove(int index)
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
     derp = nodeToTakeOut->getNodeData();
-    
-    BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
-    BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
-    
-    prev->setNextPointer(next);
-    next->setPreviousPointer(prev);
+    if(this->getSize() -1)
+    {
+        BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
+        BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
+        
+        if(prev != nullptr)
+        {
+            prev->setNextPointer(next);
+        }
+        if(next != nullptr)
+        {
+            next->setPreviousPointer(prev);
+        }
+        if(index == 0)
+        {
+            this->setFront(this->getFront()->getNextPointer());
+            this->getFront()->setPreviousPointer(nullptr);
+        }
+        else if(index == this->getSize() -1)
+        {
+            this->setEnd(this->getEnd()->getPreviousPointer());
+            this->getEnd()->setNextPointer(nullptr);
+        }
+        
+    }
+    else
+    {
+        this->setFront(nullptr);
+        this->setEnd(nullptr);
+    }
     
     delete nodeToTakeOut;
     
@@ -135,5 +162,50 @@ Type DoubleList<Type> :: getFromIndex(int index)
     
     
 }
+
+
+
+template <class Type>
+int DoubleList<Type> :: indexOf(Type findMe)
+{
+    int index = -1;
+    
+    BiDirectionalNode<Type> * searchPointer = this->getFront();
+    for(int spot = 0; spot < this->getSize(); spot++)
+    {
+        if(findMe == searchPointer->getNodeData())
+        {
+            return spot;
+        }
+        searchPointer = searchPointer->getNextPointer();
+    }
+    return index;
+    
+}
+
+template <class Type>
+int DoubleList<Type> :: otherIndexOf(Type findMe, int position)
+{
+    assert(position >= 0 && position < this->getSize());
+    
+    int nextIndex = -1;
+    
+    BiDirectionalNode<Type> * current = this->getFront();
+    
+    for(int index = 0; index < this->getSize(); index++)
+    {
+        if(index >= position)
+        {
+            if(current->getNodeData() == findMe)
+            {
+                return index;
+            }
+        }
+        current = current->getNextPointer();
+    }
+    return nextIndex;
+    
+}
+
 
 #endif /* DoubleList_h */

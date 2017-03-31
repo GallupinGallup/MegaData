@@ -6,13 +6,12 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-
 #include "foodItem.hpp"
 
 FoodItem :: FoodItem()
 {
-    this->calories = 666;
-    this->foodName = "poop";
+    this->calories = 999;
+    this->foodName = "rotten";
     this->cost = 676767767.44;
     this->delicious = false;
 }
@@ -24,7 +23,6 @@ FoodItem :: FoodItem(string name)
     this->calories = 999;
     this->foodName = name;
 }
-
 
 int FoodItem :: getCalories()
 {
@@ -70,4 +68,16 @@ void FoodItem :: setCost(double cost)
 }
 
 
-
+bool FoodItem :: operator < (FoodItem & otherFood)
+{
+    if(this->isDelicious() && otherFood.isDelicious())
+    {
+        if(this->getCalories() > otherFood.getCalories())
+        {
+            
+            return true;
+        }
+        return false;
+    }
+    return false;
+}
