@@ -47,6 +47,9 @@
 		5C6EF27F1E490F3700A5C3B0 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntNode.hpp; sourceTree = "<group>"; };
 		5CA7513D1E54E60900CFB271 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		5CD3988C1E523F4A000F9356 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
+		5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTreeNode.hpp; sourceTree = "<group>"; };
+		5CDA65191E9D554B00CB20A3 /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		5CDAA63A1E8C29BD00362623 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
 		5CDAA63B1E8C2AD400362623 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = ../../../../Downloads/CrimeData.cpp; sourceTree = "<group>"; };
 		5CDAA63C1E8C2AD400362623 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = ../../../../Downloads/CrimeData.hpp; sourceTree = "<group>"; };
@@ -72,9 +75,12 @@
 			isa = PBXGroup;
 			children = (
 				5C0D8A621E71E5B000B66EBD /* Timer.hpp */,
+				5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */,
 				5C0D8A601E71E59700B66EBD /* Timer.cpp */,
 				5C28F3861E7712E500D30DAC /* FoodItem.cpp */,
+				5CDA65191E9D554B00CB20A3 /* Tree.hpp */,
 				5C28F3871E7712E500D30DAC /* FoodItem.hpp */,
+				5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */,
 			);
 			name = Tools;
 			sourceTree = "<group>";

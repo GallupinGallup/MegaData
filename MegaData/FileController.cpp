@@ -42,7 +42,7 @@ DoubleList<FoodItem> FileController :: readDataFromFile(string filename)
                 FoodItem temp(title);
                 temp.setCost(cost);
                 temp.setCalories(calories);
-                temp.setDelicious(isDelish);
+                temp.isDelicious(isDelish);
                 
                 dataSource.add(temp);
             }
