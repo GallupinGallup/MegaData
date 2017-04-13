@@ -128,12 +128,14 @@ Methods
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1393</x>
-      <y>49</y>
-      <w>70</w>
-      <h>21</h>
+      <x>1232</x>
+      <y>56</y>
+      <w>294</w>
+      <h>119</h>
     </coordinates>
-    <panel_attributes>SimpleClass</panel_attributes>
+    <panel_attributes>BinarySearchTreeNode&lt;Type&gt;
+--
+-nodeData : Type</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -199,8 +201,8 @@ Methods
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>161</x>
-      <y>231</y>
+      <x>105</x>
+      <y>266</y>
       <w>245</w>
       <h>175</h>
     </coordinates>

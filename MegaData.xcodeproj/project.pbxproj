@@ -75,12 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				5C0D8A621E71E5B000B66EBD /* Timer.hpp */,
-				5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */,
 				5C0D8A601E71E59700B66EBD /* Timer.cpp */,
 				5C28F3861E7712E500D30DAC /* FoodItem.cpp */,
-				5CDA65191E9D554B00CB20A3 /* Tree.hpp */,
 				5C28F3871E7712E500D30DAC /* FoodItem.hpp */,
-				5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -168,12 +165,23 @@
 		5C6EF27D1E4904FB00A5C3B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5C8FD8331E9FF0DB00FF23F7 /* Trees */,
 				5CDAA6401E8C2C1E00362623 /* Crime Data */,
 				5C59878B1E6F477600477180 /* LinearStructures */,
 				5C5987891E6F46D500477180 /* Nodes */,
 				5C0D8A5F1E71E2B900B66EBD /* Tools */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5C8FD8331E9FF0DB00FF23F7 /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */,
+				5CDA65191E9D554B00CB20A3 /* Tree.hpp */,
+				5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */,
+			);
+			name = Trees;
 			sourceTree = "<group>";
 		};
 		5CDAA6401E8C2C1E00362623 /* Crime Data */ = {
