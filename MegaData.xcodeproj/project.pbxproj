@@ -34,6 +34,7 @@
 		5C0D8A621E71E5B000B66EBD /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = ../../FirstCPlusPlusProject/FirstCPlusPlus/Model/Timer.hpp; sourceTree = "<group>"; };
 		5C28F3861E7712E500D30DAC /* FoodItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FoodItem.cpp; sourceTree = "<group>"; };
 		5C28F3871E7712E500D30DAC /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FoodItem.hpp; sourceTree = "<group>"; };
+		5C33E9621EAA8386005C7EDA /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 		5C59878C1E6F4A7000477180 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		5C59878D1E6F4A7B00477180 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		5C644DC21E4BA34D0089FA0C /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntNodeArray.cpp; sourceTree = "<group>"; };
@@ -180,6 +181,7 @@
 				5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */,
 				5CDA65191E9D554B00CB20A3 /* Tree.hpp */,
 				5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */,
+				5C33E9621EAA8386005C7EDA /* AVLTree.hpp */,
 			);
 			name = Trees;
 			sourceTree = "<group>";
