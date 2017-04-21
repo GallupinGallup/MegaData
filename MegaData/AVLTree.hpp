@@ -171,6 +171,21 @@ void AVLTree<Type> :: remove(Type item)
 {
     removeNode(this->getRoot(), item);
 }
+template <class Type>
+Type BinarySearchTree<Type> :: findMinimum()
+{
+    assert(root !nullptr);
+    BinaySearchTreeNode<Type> * largest = getLeftMostChild(root);
+    return smallest->getNodeData();
+}
+
+template<class Type>
+Type BinarySerachTree<Tpye> :: FindMaximum()
+{
+    assert(root != nullptr);
+    BinarySearchTreeNode<Tpye * largest = getRightMosetChild(root);
+    return largest->getNodeData();
+}
 
 
 #endif /* AVLTree_h */
