@@ -5,12 +5,14 @@
 //  Created by Gallup, Tyler on 4/11/17.
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
-
-#ifndef Tree_h #define Tree_h
+#ifndef Tree_h
+#define Tree_h
 #include <assert.h>
+
 template <class Type> class Tree
 {
-public:     //Traversals
+public:
+    //Traversals
     virtual void inOrderTraversal() = 0;
     virtual void postOrderTraversal() = 0;
     virtual void preOrderTraversal() = 0;

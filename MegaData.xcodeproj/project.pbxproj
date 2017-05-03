@@ -47,9 +47,10 @@
 		5C6EF27E1E490F3700A5C3B0 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntNode.cpp; sourceTree = "<group>"; };
 		5C6EF27F1E490F3700A5C3B0 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IntNode.hpp; sourceTree = "<group>"; };
 		5CA7513D1E54E60900CFB271 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		5CC956141EB7BA54008E3D06 /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
 		5CD3988C1E523F4A000F9356 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
-		5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTreeNode.hpp; sourceTree = "<group>"; };
+		5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTreeNode.h; sourceTree = "<group>"; };
 		5CDA65191E9D554B00CB20A3 /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		5CDAA63A1E8C29BD00362623 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
 		5CDAA63B1E8C2AD400362623 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = ../../../../Downloads/CrimeData.cpp; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 				5C644DC31E4BA34D0089FA0C /* IntNodeArray.hpp */,
 				5C59878A1E6F471600477180 /* TypedDataSample */,
 				5C5987871E6F466800477180 /* InheritsFromDoublyLinkedList */,
+				5CC956141EB7BA54008E3D06 /* HashTable.hpp */,
 			);
 			name = LinearStructures;
 			sourceTree = "<group>";
@@ -180,7 +182,7 @@
 			children = (
 				5CDA65171E9D551000CB20A3 /* BinarySearchTree.hpp */,
 				5CDA65191E9D554B00CB20A3 /* Tree.hpp */,
-				5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.hpp */,
+				5CDA65181E9D553500CB20A3 /* BinarySearchTreeNode.h */,
 				5C33E9621EAA8386005C7EDA /* AVLTree.hpp */,
 			);
 			name = Trees;

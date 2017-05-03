@@ -6,56 +6,38 @@
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
 
-#include "FileController.hpp"
+#ifndef FileController_hpp
+#define FileController_hpp
 
-DoubleList<FoodItem> FileController :: readDataFromFile(string filename)
+#include "DoubleList.hpp"
+#include "FoodItem.hpp"
+#include "CrimeData.hpp"
+#include "BinarySearchTree.hpp"
+#include "AVLTree.hpp"
+#include <string> // String access
+#include <fstream> // File operations
+#include <iostream> // Console thing
+#include <sstream> // String as stream
+
+
+using namespace std;
+
+class FileController
 {
-    DoubleList<FoodItem> dataSource;
-    string currentCSVLine;
-    int rowCount = 0;
+private:
+    DoubleList<FoodItem> foodItemList;
     
-    ifstream dataFile(filename);
     
-    if(dataFile.is_open())
-    {
-        while(!dataFile.eof())
-        {
-            getline(dataFile, currentCSVLine, '\r');
-            stringstream parseCSV(currentCSVLine);
-            
-            string title, tempCost, tempCalorie, tempTasty;
-            double cost;
-            int calories;
-            bool isDelish;
-            
-            getline(parseCSV, title, ',');
-            getline(parseCSV, tempCost, ',');
-            getline(parseCSV, tempCalorie, ',');
-            getline(parseCSV, tempTasty, ',');
-            
-            if (rowCount != 0)
-            {
-                cost = stod(tempCost);
-                calories =stoi(tempCalorie);
-                isDelish = stoi(tempTasty);
-                
-                FoodItem temp(title);
-                temp.setCost(cost);
-                temp.setCalories(calories);
-                temp.isDelicious(isDelish);
-                
-                dataSource.add(temp);
-            }
-            rowCount++;
-            
-            cout << currentCSVLine << endl;
-        }
-        dataFile.close();
-    }
-    else
-    {
-        cerr<< "NO FILE" << endl;
-    }
-    
-    return dataSource;
-}
+public:
+    DoubleList<FoodItem> readDataFromFile(string filename);
+    void writeFoodDataStatistics(DoubleList<FoodItem> source, string fileName);
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
+    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
+};
+
+
+
+
+
+
+#endif /* FileController_hpp */

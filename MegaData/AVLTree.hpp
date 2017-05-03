@@ -10,7 +10,7 @@
 #define AVLTree_h
 
 #include "BinarySearchTreeNode.h"
-#include "BinarySearchTree.h"
+#include "BinarySearchTree.hpp"
 
 template <class Type>
 class AVLTree : public BinarySearchTree<Type>
@@ -23,8 +23,8 @@ private:
     
     BinarySearchTreeNode<Type> * balanceSubTree (BinarySearchTreeNode<Type> * parent);
     
-    BinarySearchTreeNode<Type> * insertNode(BinarySearchTreeNode<Type> * parent);
-    BinarySearchTreeNode<Type> * removeNode(BinarySearchTreeNode<Type> * parent);
+    BinarySearchTreeNode<Type> * insertNode(BinarySearchTreeNode<Type> * parent, Type inserted);
+    BinarySearchTreeNode<Type> * removeNode(BinarySearchTreeNode<Type> * parent, Type remove);
     
     int heightDifference(BinarySearchTreeNode<Type>* parent);
     
@@ -46,7 +46,7 @@ int AVLTree<Type> :: heightDifference(BinarySearchTreeNode<Type> * node)
     int leftHeight = this->calculateHeight(node->getLeftChild());
     int rightHeight = this->calculateHeight(node->getRightChild());
     balance = leftHeight - rightHeight;
-    rreturn balance;
+    return balance;
 }
 
 template<class Type>
@@ -149,15 +149,15 @@ BinarySearchTreeNode<Type> * AVLTree<Type> ::  insertNode(BinarySearchTreeNode<T
     }
     else if(inserted < parent->getNodeData())
     {
-        parent->setLeftChild(insertNode(parent->getLeftChild(),iserted));
+        parent->setLeftChild(insertNode(parent->getLeftChild(),inserted));
         parent = balanceSubTree(parent);
     }
     else if(inserted > parent->getNodeData())
     {
-        parent->setRightChild(insertNode(parent->getRightChild(),iserted));
+        parent->setRightChild(insertNode(parent->getRightChild(),inserted));
         parent = balanceSubTree(parent);
     }
-    retun parent;
+    return parent;
 }
 
 template<class Type>
@@ -171,21 +171,11 @@ void AVLTree<Type> :: remove(Type item)
 {
     removeNode(this->getRoot(), item);
 }
-template <class Type>
-Type BinarySearchTree<Type> :: findMinimum()
-{
-    assert(root !nullptr);
-    BinaySearchTreeNode<Type> * largest = getLeftMostChild(root);
-    return smallest->getNodeData();
-}
 
-template<class Type>
-Type BinarySerachTree<Tpye> :: FindMaximum()
-{
-    assert(root != nullptr);
-    BinarySearchTreeNode<Tpye * largest = getRightMosetChild(root);
-    return largest->getNodeData();
-}
+
+
+
+
 
 
 #endif /* AVLTree_h */
