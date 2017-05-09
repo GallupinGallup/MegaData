@@ -5,8 +5,9 @@
 //  Created by Gallup, Tyler on 2/8/17.
 //  Copyright © 2017 Gallup, Tyler. All rights reserved.
 //
-#ifndef DataStructureController_hpp
-#define DataStructureController_hpp
+
+#ifndef ArrayController_hpp
+#define ArrayController_hpp
 
 #include "Node.hpp"
 #include "Array.hpp"
@@ -17,28 +18,37 @@
 #include "DoublyLinkedList.hpp"
 #include "BiDirectionalNode.hpp"
 #include "Timer.hpp"
+#include "FoodItem.hpp"
+#include "CircularList.hpp"
+#include "FileController.hpp"
+#include "BinarySearchTreeNode.h"
+#include "Tree.h"
+#include "BinarySearchTree.h"
 
 #include <string>
 
 using namespace std;
 
-class DataStructureController
+class ArrayController
 {
 private:
     void testIntArray();
     Node<int> numberNode;
     Node<string> wordNode;
-    void testAdvancedFeatures();
-    void testList();
-    void testListTiming();
     void testNodes();
+    void testAdvancedFeatures();
+    void testListIntro();
+    void testListTiming();
     void testIntStack();
     void testFoodQueue();
+    void testCircularList();
+    void testBinarySearchTreeOperations();
+    void testBinarySearchData();
+    void testAVLTreeOperations();
+    void testAVLData();
     
 public:
-    DataStructureController();
+    ArrayController();
     void start();
     
 };
-
-#endif /*DataStructureController*/

@@ -8,78 +8,141 @@
 
 #include "DataStructureController.hpp"
 #include <iostream>
-#include "IntNode.hpp"
-#include "IntNodeArray.hpp"
-#include "List.hpp"
-#include "Queue.hpp"
-#include "FoodItem.hpp"
-#include "Stack.hpp"
-#include "CircularList.hpp"
-#include "DoubleList.hpp"
+
 
 using namespace std;
 
-DataStructureController :: DataStructureController(){
-    wordNode = Node<string>();
-    numberNode = Node<int>();
-}
-
-void DataStructureController :: start(){
-    testFoodQueue();
-}
-
-void DataStructureController:: testAdvancedFeatures(){
-    int showDestructor = 0;
+void ArrayController :: start()
+{
+    // This is an array
+    /*
+     int intArray[4];
+     intArray[0] = 4;
+     intArray[1] = 6;
+     intArray[2] = 8;
+     intArray[3] = 10;
+     
+     double doubleArray[4] = {23.23, 34.34, 45.45, 56.56};
+     int userChoice;
+     cout << intArray[3] << endl;
+     cout << "Choose a position of doubleArray between 0 and 3" << endl;
+     cin >> userChoice;
+     if(userChoice > 3 || userChoice < 0)
+     {
+     cout << "Sorry but that is out of bounds" << endl;
+     }
+     else
+     {
+     cout << "The value of " << userChoice << " is " << doubleArray[userChoice] << endl;
+     }
+     */
     
-    if(showDestructor < 1){
+    //cout << "Starting the project" << endl;
+    
+    // cout << "Switching to the array testing" << endl;
+    // testNodes();
+    // cout << "Finished testing" << endl;
+    // testAdvancedFeatures();
+    // testListIntro();
+    testListTiming();
+    testFoodQueue();
+    testIntStack();
+    testBinarySearchTreeOperations();
+    
+    
+}
+
+ArrayController :: ArrayController()
+{
+    
+}
+
+//void ArrayController :: testNodes()
+//{
+//  cout << "Here is the Node<string>" << endl;
+//  cout << wordNode.getNodeData() << endl;
+// cout << "Here is the Node<int>" << endl;
+//  cout << numberNode.getNodeData() << endl;
+//}
+
+//void ArrayController :: testIntArray()
+//{
+//cout << "Testing the array" << endl;
+
+//IntNodeArray temp = IntNodeArray(3);
+// for(int cute = 0; cute < 3; cute++)
+// {
+//     cout << temp.getFromIndex(cute) << " Is at spot  " << cute << endl;
+// }
+
+// cout << "Testing input" << endl;
+
+// for(int index = 0; index < 3; index++)
+//{
+//    temp.setAtIndex(index, index);
+//
+// }
+// for(int index = 0; index< 3; index++)
+//  {
+//      cout << temp.getFromIndex(index) << " is at spot " << index << endl;
+//  }
+//}
+
+void ArrayController :: testAdvancedFeatures()
+{
+    int showDeconstructor = 0;
+    if(showDeconstructor < 1)
+    {
         Array<string> words = Array<string>(5);
-        cout << "Destructor stuff" << endl;
+        cout << "There should be messages about the deconstructor next." << endl;
     }
     Array<string> words = Array<string>(4);
-    words.setAtIndex(0, "first");
-    words.setAtIndex(3, "last");
+    words.setAtIndex(0, "at 0");
+    words.setAtIndex(3, "in the last spot.");
     Array<string> copiedWords = Array<string>(words);
     
-    cout << words.getFromIndex(0) << " should = " << copiedWords.getFromIndex(0) << endl;
+    cout<< "These should match: " << endl;
+    cout<< words.getFromIndex(0) << "Should be the same as " << copiedWords.getFromIndex(0) << endl;
+    
+    copiedWords.setAtIndex(3, "Changed the contents of the copied Array");
+    
 }
 
-void DataStructureController :: testIntArray(){
-    cout << "Testing the array" << endl;
+void ArrayController :: testListIntro()
+{
+    string removed;
+    List<string> sample;
+    sample.addFront("\"My name is larry! FEAR ME!!!!!!\"");
+    sample.addEnd("(somewhere distant) I will never fear larry!!!!");
+    sample.addAtIndex(0, "As Larry mounted the small hill a new determination filled him.");
     
-    IntNodeArray temp = IntNodeArray(3);
-    
-    for(int index = 0; index < 3; index++){
-        cout << temp.getFromIndex(index) << " is at spot " << index << endl;
-    }
-}
-
-void DataStructureController:: testList(){
-    List<string> food;
-    food.addFront("Taco");
-    food.addEnd("Steak");
-    food.addAtIndex(1, "Jacob is a poop");
-    food.addEnd("no");
-    
-    cout << "Contains \"no\"? " << food.contains("no") << endl << endl;
-    
-    for(int index = 0; index < food.getSize(); index++){
-        cout << food.getFromIndex(index) << " is at index: " << index << endl;
+    for(int index = 0; index < sample.getSize(); index++)
+    {
+        cout << sample.getFromIndex(index) << endl;
     }
     
-    food.remove(3);
+    removed = sample.remove(1);
     
-    cout << "Size: " << food.getSize() << endl << endl;
-    cout << "Contains \"no\"? " << food.contains("no") << endl << endl;
+    cout << "You just removed" << removed << endl;
+    sample.setAtIndex(1,"However he no longer felt courageous enough to share his message with the world");
+    
+    cout << sample.getFromIndex(1) << endl;;
+    
+    if (sample.contains("However he no longer felt courageous enough to share his message with the world") == 0)
+    {
+        cout << "it contains this yay" << endl;
+    }
+    else
+    {
+        cout <<  "no good" << endl;
+    }
+    
+    cout << sample.getEnd() << endl;
+    cout << sample.getFront() << endl;
+    
 }
 
-void DataStructureController:: testNodes(){
-    cout << "The contentes of Node<stinrg>" << endl;
-    cout << wordNode.getNodeData() << endl;
-    cout << "Here is the Node<int>" << endl;
-    cout << numberNode.getNodeData() << endl;
-}
-
-void DataStructureController :: testListTiming()
+void ArrayController :: testListTiming()
 {
     DoubleList<int> timingList;
     Timer totalTimer;
@@ -121,69 +184,198 @@ void DataStructureController :: testListTiming()
     averageSlow += averageSlow/1000.00;
     averageFast += averageFast/1000.00;
     
-    cout << "When you do it in one diretion searching you get an average of: "  << averageSlow<< endl;
-    cout << "When you do the BiDirectional way you get: " << averageFast << endl;
+    cout << "When you do it in one diretion searching you get an average of: "  << averageSlow << "microseconds" << endl;
+    cout << "When you do the BiDirectional way you get: " << averageFast << "microseconds" << endl;
+    cout << "The time you save with the 2Directional is: " << averageSlow - averageFast << "microseconds"  << endl;
+    totalTimer.displayTimerInformation();
+    
 }
 
-void DataStructureController:: testIntStack(){
+void ArrayController :: testIntStack()
+{
     Stack<int> numberStack;
+    numberStack.push(747474747);
+    numberStack.add(2323);
+    cout << "Both the numbers in order should be 2323 747474747. and is : " << numberStack.pop() << " " << numberStack.remove(0) << endl;
+    numberStack.push(77757);
+    cout << "There should only be 1 thing in this stack and there is: " << numberStack.getSize() << endl;
+    cout << "And the one thing is " << numberStack.peek() << " and should be: 77757" << endl;;
+    numberStack.add(7);
+    numberStack.add(6);
+    numberStack.add(5);
+    numberStack.add(4);
+    numberStack.add(3);
+    numberStack.add(2);
+    numberStack.add(1);
+    cout << "Then it should count up to seven: " << numberStack.pop()<< numberStack.pop()<< numberStack.pop()<< numberStack.pop()<< numberStack.pop()<< numberStack.pop()<< numberStack.pop()<<endl;
+}
+
+void ArrayController :: testFoodQueue()
+{
     
-    numberStack.push(811);
-    numberStack.add(2315);
-    
-    cout << "Size of Stack: " << numberStack.getSize() << endl;
-    
-    numberStack.push(00);
-    numberStack.push(666);
-    numberStack.push(789);
-    
-    cout << "Size of Stack: " << numberStack.getSize() << endl;
-    
-    int testValue = numberStack.pop();
-    cout << "Test value is " << testValue << " and should be 789 " << endl;
-    
-    int otherTest = numberStack.remove(3);
-    cout << "Other test value is " << otherTest << " and should be 666 " << endl;
-    
-    cout << "Size of Stack: " << numberStack.getSize() << endl;
-    
-    cout << endl;
+    Queue<FoodItem> tastyFood;
+    FoodItem rice("Bland Chinese Dish");
+    tastyFood.enqueue(rice);
+    FoodItem boring;
+    tastyFood.add(boring);
+    FoodItem removed = tastyFood.dequeue();
+    cout << "The item removed from the queue was: "<< removed.getFoodName() << " and should be: Bland Chinese Dish" << endl;
+    FoodItem mochi("Chinese Dessert");
+    tastyFood.add(mochi);
+    int sizeOfFood = tastyFood.getSize();
+    cout << "The restuants food order queues was: "<< sizeOfFood << " and should be: 2" << endl;
+    FoodItem crushedGoldFish = tastyFood.remove(0);
+    cout << "The restuants got rid of: "<< crushedGoldFish.getFoodName()  << " rice and mochi" << endl;
+    tastyFood.peek();
+    cout << "And the food in the highest priority is: " << tastyFood.peek().getFoodName() << " and should be: Chinese Dessert"<< endl;
+    cout << "And the size afer all this would be 1 and is:" << tastyFood.getSize() << endl;
     
 }
 
-void DataStructureController:: testFoodQueue(){
-    Queue<FoodItem> foods;
+void ArrayController :: testBinarySearchTreeOperations()
+
+{
     
-    FoodItem FrijolesConQueso("Frijoles con queso");
-    FrijolesConQueso.setCost(200);
-    FrijolesConQueso.setCalories(2500);
-    FrijolesConQueso.isDelicious(true);
+    BinarySearchTree<int> numbers;
     
-    FoodItem Pollo("Pollo");
-    Pollo.setCost(200);
-    Pollo.setCalories(1000);
-    Pollo.isDelicious(true);
+    numbers.insert(9843);
     
-    FoodItem Brócoli("brócoli");
-    Brócoli.setCost(1);
-    Brócoli.setCalories(60);
-    Brócoli.isDelicious(false);
+    numbers.insert(10);
     
-    cout << "Size: " << foods.getSize() << endl;
+    numbers.insert(43);
     
-    foods.enqueue(FrijolesConQueso);
-    foods.add(Pollo);
+    numbers.insert(-123);
     
-    cout << "Size: " << foods.getSize() << endl;
+    numbers.insert(23465);
     
-    FoodItem firstItem = foods.peek();
-    cout << "Item in queue: " << firstItem.getFoodName() << endl;
+    numbers.insert(10); // won't go in
     
-    foods.enqueue(Brócoli);
+    numbers.insert(43243);
     
-    FoodItem dequeued = foods.dequeue();
-    cout << "The Item dequeued from the queue was: " << dequeued.getFoodName() << endl;
+    numbers.insert(-45677654);
     
-    FoodItem removed = foods.dequeue();
-    cout << "The Item removed from the queue was: " << removed.getFoodName() << endl << endl;
+    numbers.insert(92165);
+    
+    
+    
+    cout << "Size should be 8 and is: " << numbers.getSize() << endl;
+    
+    cout << "In order traversal should be: \n\t-45677654 \n\t-123 \n\t10 \n\t43 \n\t9843 \n\t23465 \n\t43243 \n\t92165" << endl;
+    
+    numbers.inOrderTraversal();
+    
+    
+    
+    cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
+    
+    cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
+    
+    
+}
+
+void ArrayController :: testBinarySearchData()
+
+{
+    
+    FileController fileData;
+    
+    Timer treeTimer;
+    
+    treeTimer.startTimer();
+    
+    BinarySearchTree<CrimeData> crimeTree = fileData.readCrimeDataToBinarySearchTree("/Users/asmi0816/Documents/crime.csv");
+    
+    treeTimer.stopTimer();
+    
+    
+    
+    int count = crimeTree.getSize();
+    
+    int height = crimeTree.getHeight();
+    
+    bool complete = crimeTree.isComplete();
+    
+    bool balanced = crimeTree.isBalanced();
+    
+    
+    
+    cout << "The count of the tree is: " << count << ", the height is " << height << ".\n The tree's balanced status is " << balanced << ", and its complete status is " << complete << endl;
+    
+    cout << "The time to read in the tree was: " << endl;
+    
+    treeTimer.displayTimerInformation();
+}
+
+void ArrayController :: testAVLTreeOperations()
+
+{
+    
+    AVLTree<int> numbers;
+    
+    numbers.insert(9843);
+    
+    numbers.insert(10);
+    
+    numbers.insert(43);
+    
+    numbers.insert(-123);
+    
+    numbers.insert(23465);
+    
+    numbers.insert(10); // won't go in
+    
+    numbers.insert(43243);
+    
+    numbers.insert(-45677654);
+    
+    numbers.insert(92165);
+    
+    
+    
+    cout << "Size should be 8 and is: " << numbers.getSize() << endl;
+    
+    cout << "In order traversal should be: \n\t-45677654 \n\t-123 \n\t10 \n\t43 \n\t9843 \n\t23465 \n\t43243 \n\t92165" << endl;
+    
+    numbers.inOrderTraversal();
+    
+    
+    
+    cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
+    
+    cout << "Balanced should be true || 1 and is: " << numbers.isBalanced() << endl;
+    
+}
+
+void ArrayController :: testAVLData()
+
+{
+    
+    FileController fileData;
+    
+    Timer treeTimer;
+    
+    treeTimer.startTimer();
+    
+    AVLTree<CrimeData> crimeTree = fileData.readCrimeDataToAVLTree("/Users/cody.henrichsen/Documents/crimes.csv");
+    
+    treeTimer.stopTimer();
+    
+    
+    
+    int count = crimeTree.getSize();
+    
+    int height = crimeTree.getHeight();
+    
+    bool complete = crimeTree.isComplete();
+    
+    bool balanced = crimeTree.isBalanced();
+    
+    
+    
+    cout << "The count of the tree is: " << count << ", the height is " << height << ".\n The tree's balanced status is " << balanced << ", and its complete status is " << complete << endl;
+    
+    cout << "The time to read in the tree was: " << endl;
+    
+    treeTimer.displayTimerInformation();
+    
 }
